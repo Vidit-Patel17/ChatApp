@@ -2,9 +2,9 @@
 
 This is a C-based group chat application that makes use of sockets and multithreading. To handle multiple clients and broadcast messages from one client to the others, the server is multithreaded. The client also has two threads: one for receiving broadcast messages (messages from other clients), and the other for receiving user input and sending it to the server.
 
-# Issues
-
-- UI issues on client side , while receving a broadcast message.
+# To-do
+- Implement graceful shutdown for server
+- Implement Keyboard interrupt shutdown in both server and client , currently closing program using keyboard interrupt in client causes infinite loop in server (and vice versa). 
 
 # Requirements
 
@@ -18,4 +18,4 @@ This is a C-based group chat application that makes use of sockets and multithre
 
 # Screenshot
 
-![https://github.com/Vidit-Patel17/ChatApp/blob/main/resources/screenshot.png?raw=true](https://github.com/Vidit-Patel17/ChatApp/blob/main/resources/screenshot.png?raw=true)
+![Working Example](https://github.com/Vidit-Patel17/ChatApp/blob/main/screenshot.png?raw=true)
