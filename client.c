@@ -13,8 +13,9 @@ void* reader(void *param){
     while(1){
         bzero(buffer,2048);
         read(sock,buffer,sizeof(buffer));
-        printf("\r");    
-        printf("%s \n %s",buffer,username);   
+        //removing the username tag stuck in stdin 
+        //printing broadcast message then again printing username message
+        fprintf(stderr,"\r%s%s : ",buffer,username);   
     }
 }
 
@@ -48,6 +49,7 @@ int main(int argc ,char *argv[]){
     }
 
     char *ip = argv[1]; //localhost , since the client and server are suppose to run on same computer
+    
     int port = atoi(argv[2]);
 
     int sock;
